@@ -95,12 +95,32 @@ function colorFileSvg(name) {
 }
 for (const [key, def] of Object.entries(cfg.files)) write(ids.file(key), colorFileSvg(def.glyph));
 
-// ---------- ícone da extensão (128x128 PNG) ----------
+// ---------- ícone da extensão (128x128 PNG): pasta pixel-art + bloco de terra colorido ----------
 {
-  const rows = parseGlyph('grassCube');
-  const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-<rect width="128" height="128" rx="24" fill="#263238"/>
-<g transform="translate(8 6) scale(7)"><path fill="#7cb342" d="${FOLDER_OPEN}"/><path fill="${tint('#7cb342')}" shape-rendering="crispEdges" d="${badge(rows)}"/></g></svg>`;
+  const N = 16, g = Array.from({ length: N }, () => Array(N).fill(null));
+  const fill = (x, y, w, h, c) => { for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) if (i >= 0 && j >= 0 && i < N && j < N) g[j][i] = c; };
+  const mixc = (a, b, t) => toHex(hex(a).map((v, i) => v + (hex(b)[i] - v) * t));
+  const base = '#6fbf4a', back = mixc(base, '#000000', 0.3);
+  // pasta aberta pixel-art
+  fill(1, 2, 5, 1, back); fill(1, 3, 14, 10, back);
+  for (const [y, a0, b0] of [[6, 4, 15], [7, 4, 15], [8, 3, 14], [9, 3, 14], [10, 2, 13], [11, 2, 13], [12, 1, 12]]) fill(a0, y, b0 - a0 + 1, 1, mixc(base, '#ffffff', 0.05));
+  fill(4, 6, 12, 1, mixc(base, '#ffffff', 0.25)); fill(1, 12, 12, 1, mixc(base, '#000000', 0.1));
+  // bloco de terra colorido com contorno, no canto inferior direito
+  const rows = FILE_GLYPHS.grassCube, h = rows.length, w = rows[0].length;
+  const ox = N - w - Math.floor((8 - w) / 2), oy = N - h - Math.floor((8 - h) / 2), cells = [];
+  rows.forEach((row, y) => row.split('').forEach((ch, x) => { if (ch !== '.') cells.push([ox + x, oy + y, PALETTE[ch]]); }));
+  const set = new Set(cells.map(([x, y]) => `${x},${y}`));
+  for (const [x, y] of cells) for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) if (!set.has(`${x + dx},${y + dy}`)) fill(x + dx, y + dy, 1, 1, OUTLINE);
+  for (const [x, y, c] of cells) fill(x, y, 1, 1, c);
+  let rects = '';
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+    const c = g[y][x]; if (!c) continue;
+    let e = x; while (e + 1 < N && g[y][e + 1] === c) e++;
+    rects += `<rect x="${x * 2}" y="${y * 2}" width="${(e - x + 1) * 2}" height="2" fill="${c}"/>`; x = e;
+  }
+  const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" shape-rendering="crispEdges">
+<rect width="128" height="128" rx="20" fill="#2b2b33"/><rect x="6" y="6" width="116" height="116" rx="16" fill="#34343e"/>
+<g transform="translate(16 12) scale(3)">${rects}</g></svg>`;
   fs.mkdirSync(r('images'), { recursive: true });
   fs.writeFileSync(r('images', 'icon.svg'), icon);
   try {

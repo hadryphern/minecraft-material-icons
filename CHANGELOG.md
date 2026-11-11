@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 2026-11-11
+
+### Alterado
+- Ícone da extensão volta a ser a pasta pixel-art verde com o bloco de terra colorido.
+
 ## 1.1.0 — 2026-11-11
 
 ### Adicionado

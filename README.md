@@ -15,12 +15,12 @@ Cada pasta Minecraft tem versão **fechada e aberta**. Como no Material Icon The
 
 **Pelo Marketplace:** procure **Minecraft Material Icons** na aba *Extensions* do VS Code, ou rode `ext install hadrykkxd.minecraft-material-icons` no Quick Open (`Ctrl+P`).
 
-**Pelo .vsix:** abra o VS Code e vá em *Extensions* (`Ctrl+Shift+X`). Clique em `...` (canto superior direito), escolha **Install from VSIX...** e selecione `minecraft-material-icons-1.1.0.vsix`.
+**Pelo .vsix:** abra o VS Code e vá em *Extensions* (`Ctrl+Shift+X`). Clique em `...` (canto superior direito), escolha **Install from VSIX...** e selecione `minecraft-material-icons-1.1.1.vsix`.
 
 **Pelo terminal:**
 
 ```bash
-code --install-extension "minecraft-material-icons-1.1.0.vsix"
+code --install-extension "minecraft-material-icons-1.1.1.vsix"
 ```
 
 **Ativar o tema:** `Ctrl+Shift+P` → **Preferences: File Icon Theme** → **Minecraft Material Icons**.
