@@ -1,0 +1,1022 @@
+{
+  "_comment": "Fonte única dos ícones Minecraft. Edite aqui (ou use `npm run add-folder`) e rode `npm run package`. 'glyph' = nome em src/glyphs.mjs; 'color' = cor da pasta (estilo Material: uma cor por ícone; arquivos de mod usam as cores de src/file-glyphs.mjs); 'glyphColor' (opcional) = cor do símbolo, por padrão um tom claro de 'color'; 'names' = nomes de pasta (minúsculos); 'rootNames' = nomes quando a pasta é raiz do workspace; 'source' = 'project' ou 'conventional'.",
+  "folders": {
+    "src": {
+      "glyph": "code",
+      "color": "#4caf50",
+      "names": [
+        "src"
+      ],
+      "source": "conventional",
+      "glyphColor": "#c8e6c9",
+      "colorFrom": "Material Icon Theme: folder-src"
+    },
+    "main": {
+      "glyph": "heart",
+      "color": "#4caf50",
+      "names": [
+        "main"
+      ],
+      "source": "conventional"
+    },
+    "client": {
+      "glyph": "monitor",
+      "color": "#039be5",
+      "names": [
+        "client"
+      ],
+      "source": "conventional",
+      "glyphColor": "#b3e5fc",
+      "colorFrom": "Material Icon Theme: folder-client"
+    },
+    "common": {
+      "glyph": "exchange",
+      "color": "#ab47bc",
+      "names": [
+        "common"
+      ],
+      "source": "conventional",
+      "glyphColor": "#e1bee7",
+      "colorFrom": "Material Icon Theme: folder-shared"
+    },
+    "server": {
+      "glyph": "server",
+      "color": "#fbc02d",
+      "names": [
+        "server",
+        "dedicatedserver"
+      ],
+      "source": "conventional",
+      "glyphColor": "#fffde7",
+      "colorFrom": "Material Icon Theme: folder-server"
+    },
+    "java": {
+      "glyph": "coffee",
+      "color": "#ef5350",
+      "names": [
+        "java"
+      ],
+      "source": "conventional",
+      "glyphColor": "#ffcdd2",
+      "colorFrom": "Material Icon Theme: folder-java"
+    },
+    "kotlin": {
+      "glyph": "letterK",
+      "color": "#9c27b0",
+      "names": [
+        "kotlin"
+      ],
+      "source": "conventional",
+      "glyphColor": "#e1bee7",
+      "colorFrom": "Material Icon Theme: folder-kotlin"
+    },
+    "com": {
+      "glyph": "parcel",
+      "color": "#8d6e63",
+      "names": [
+        "com",
+        "net",
+        "org",
+        "blue"
+      ],
+      "source": "conventional"
+    },
+    "api": {
+      "glyph": "plug",
+      "color": "#fbc02d",
+      "names": [
+        "api"
+      ],
+      "source": "conventional",
+      "glyphColor": "#fffde7",
+      "colorFrom": "Material Icon Theme: folder-api"
+    },
+    "core": {
+      "glyph": "orb",
+      "color": "#1976d2",
+      "names": [
+        "core",
+        "gameplay"
+      ],
+      "source": "conventional",
+      "glyphColor": "#bbdefb",
+      "colorFrom": "Material Icon Theme: folder-core"
+    },
+    "init": {
+      "glyph": "power",
+      "color": "#66bb6a",
+      "names": [
+        "init"
+      ],
+      "source": "conventional"
+    },
+    "registry": {
+      "glyph": "clipboard",
+      "color": "#ffa726",
+      "names": [
+        "registry",
+        "registries"
+      ],
+      "source": "project"
+    },
+    "blocks": {
+      "glyph": "cube",
+      "color": "#78909c",
+      "names": [
+        "blocks",
+        "block"
+      ],
+      "source": "conventional"
+    },
+    "items": {
+      "glyph": "sword",
+      "color": "#42a5f5",
+      "names": [
+        "items",
+        "item",
+        "armor",
+        "ingots"
+      ],
+      "source": "conventional"
+    },
+    "entities": {
+      "glyph": "blob",
+      "color": "#ef5350",
+      "names": [
+        "entities",
+        "entity",
+        "mobs",
+        "mob",
+        "entity_types"
+      ],
+      "source": "conventional"
+    },
+    "blockentities": {
+      "glyph": "chest",
+      "color": "#a1887f",
+      "names": [
+        "blockentities",
+        "blockentity",
+        "block_entity",
+        "block_entities",
+        "tileentities",
+        "tileentity"
+      ],
+      "source": "conventional"
+    },
+    "fluids": {
+      "glyph": "droplet",
+      "color": "#29b6f6",
+      "names": [
+        "fluids",
+        "fluid",
+        "water"
+      ],
+      "source": "conventional"
+    },
+    "biomes": {
+      "glyph": "tree",
+      "color": "#66bb6a",
+      "names": [
+        "biomes",
+        "biome",
+        "tree",
+        "trees"
+      ],
+      "source": "conventional"
+    },
+    "dimensions": {
+      "glyph": "portal",
+      "color": "#7e57c2",
+      "names": [
+        "dimensions",
+        "dimension",
+        "dimension_type",
+        "dimension_types",
+        "aurora",
+        "shadow"
+      ],
+      "source": "conventional"
+    },
+    "chaoticdimensions": {
+      "glyph": "chaosPortal",
+      "color": "#ec407a",
+      "names": [
+        "chaoticdimensions",
+        "chaotic_dimensions",
+        "chaotic-dimensions",
+        "chaoticd"
+      ],
+      "rootNames": [
+        "chaoticdimensions",
+        "chaotic_dimensions",
+        "chaotic-dimensions"
+      ],
+      "source": "project"
+    },
+    "worldgen": {
+      "glyph": "terrain",
+      "color": "#8bc34a",
+      "names": [
+        "worldgen",
+        "configured_feature",
+        "placed_feature",
+        "noise_settings",
+        "density_function",
+        "carver",
+        "carvers",
+        "noise"
+      ],
+      "source": "project"
+    },
+    "structures": {
+      "glyph": "tower",
+      "color": "#607d8b",
+      "names": [
+        "structures",
+        "structure",
+        "template_pool",
+        "processor_list",
+        "structure_set",
+        "dream_fluid_cavern",
+        "dream_fluid_island",
+        "dream_fluid_sky_lake"
+      ],
+      "source": "conventional"
+    },
+    "recipes": {
+      "glyph": "craftGrid",
+      "color": "#ff8a65",
+      "names": [
+        "recipes",
+        "recipe",
+        "crafting"
+      ],
+      "source": "conventional"
+    },
+    "loot": {
+      "glyph": "gem",
+      "color": "#26a69a",
+      "names": [
+        "loot",
+        "loot_tables",
+        "loot_table",
+        "loottables",
+        "loot_modifiers",
+        "trade",
+        "trades"
+      ],
+      "source": "conventional"
+    },
+    "commands": {
+      "glyph": "terminal",
+      "color": "#03a9f4",
+      "names": [
+        "commands",
+        "command"
+      ],
+      "source": "conventional",
+      "glyphColor": "#b3e5fc",
+      "colorFrom": "Material Icon Theme: folder-command"
+    },
+    "events": {
+      "glyph": "bolt",
+      "color": "#fbc02d",
+      "names": [
+        "events",
+        "event"
+      ],
+      "source": "conventional",
+      "glyphColor": "#fff9c4",
+      "colorFrom": "Material Icon Theme: folder-event"
+    },
+    "networking": {
+      "glyph": "nodes",
+      "color": "#5c6bc0",
+      "names": [
+        "networking",
+        "network",
+        "netcode"
+      ],
+      "source": "conventional"
+    },
+    "packets": {
+      "glyph": "envelope",
+      "color": "#26c6da",
+      "names": [
+        "packets",
+        "packet"
+      ],
+      "source": "conventional"
+    },
+    "mixin": {
+      "glyph": "potion",
+      "color": "#ab47bc",
+      "names": [
+        "mixin",
+        "mixins",
+        "accessor",
+        "accessors",
+        "injection"
+      ],
+      "source": "project"
+    },
+    "compat": {
+      "glyph": "puzzle",
+      "color": "#ff7043",
+      "names": [
+        "compat",
+        "compatibility",
+        "jei",
+        "rei",
+        "emi"
+      ],
+      "source": "project"
+    },
+    "config": {
+      "glyph": "gear",
+      "color": "#00acc1",
+      "names": [
+        "config",
+        "configs"
+      ],
+      "source": "conventional",
+      "glyphColor": "#80deea",
+      "colorFrom": "Material Icon Theme: folder-config"
+    },
+    "datagen": {
+      "glyph": "flame",
+      "color": "#ff5722",
+      "names": [
+        "datagen",
+        "data_gen"
+      ],
+      "source": "conventional"
+    },
+    "test": {
+      "glyph": "check",
+      "color": "#00bfa5",
+      "names": [
+        "test",
+        "tests"
+      ],
+      "source": "conventional",
+      "glyphColor": "#a7ffeb",
+      "colorFrom": "Material Icon Theme: folder-test"
+    },
+    "gametest": {
+      "glyph": "target",
+      "color": "#e53935",
+      "names": [
+        "gametest",
+        "gametests",
+        "game_test"
+      ],
+      "source": "conventional"
+    },
+    "resources": {
+      "glyph": "ore",
+      "color": "#fbc02d",
+      "names": [
+        "resources",
+        "resource",
+        "orespawn",
+        "ores"
+      ],
+      "source": "conventional",
+      "glyphColor": "#fff9c4",
+      "colorFrom": "Material Icon Theme: folder-resource"
+    },
+    "assets": {
+      "glyph": "picture",
+      "color": "#fbc02d",
+      "names": [
+        "assets"
+      ],
+      "source": "conventional",
+      "glyphColor": "#fff9c4",
+      "colorFrom": "Material Icon Theme: folder-resource"
+    },
+    "data": {
+      "glyph": "database",
+      "color": "#ffca28",
+      "names": [
+        "data"
+      ],
+      "source": "conventional",
+      "glyphColor": "#ffecb3",
+      "colorFrom": "Material Icon Theme: folder-database"
+    },
+    "minecraft": {
+      "glyph": "grassCube",
+      "color": "#7cb342",
+      "names": [
+        "minecraft"
+      ],
+      "source": "conventional"
+    },
+    "versions": {
+      "glyph": "clock",
+      "color": "#ffb300",
+      "names": [
+        "versions",
+        "version",
+        "mc-versions",
+        "1.7.10",
+        "1.8.9",
+        "1.12.2",
+        "1.16.5",
+        "1.18.2",
+        "1.19.2",
+        "1.19.4",
+        "1.20",
+        "1.20.1",
+        "1.20.2",
+        "1.20.4",
+        "1.20.6",
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10"
+      ],
+      "rootNames": [
+        "1.7.10",
+        "1.8.9",
+        "1.12.2",
+        "1.16.5",
+        "1.18.2",
+        "1.19.2",
+        "1.19.4",
+        "1.20",
+        "1.20.1",
+        "1.20.2",
+        "1.20.4",
+        "1.20.6",
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10"
+      ],
+      "source": "project"
+    },
+    "lang": {
+      "glyph": "speech",
+      "color": "#5c6bc0",
+      "names": [
+        "lang",
+        "langs"
+      ],
+      "source": "conventional",
+      "glyphColor": "#c5cae9",
+      "colorFrom": "Material Icon Theme: folder-i18n"
+    },
+    "textures": {
+      "glyph": "brush",
+      "color": "#009688",
+      "names": [
+        "textures",
+        "texture"
+      ],
+      "source": "conventional",
+      "glyphColor": "#b2dfdb",
+      "colorFrom": "Material Icon Theme: folder-images"
+    },
+    "models": {
+      "glyph": "wireCube",
+      "color": "#ef5350",
+      "names": [
+        "models",
+        "geo"
+      ],
+      "source": "conventional",
+      "glyphColor": "#ffcdd2",
+      "colorFrom": "Material Icon Theme: folder-class"
+    },
+    "blockstates": {
+      "glyph": "toggles",
+      "color": "#9575cd",
+      "names": [
+        "blockstates",
+        "blockstate"
+      ],
+      "source": "conventional"
+    },
+    "sounds": {
+      "glyph": "note",
+      "color": "#ef5350",
+      "names": [
+        "sounds",
+        "sound"
+      ],
+      "source": "conventional",
+      "glyphColor": "#ffcdd2",
+      "colorFrom": "Material Icon Theme: folder-audio"
+    },
+    "shaders": {
+      "glyph": "rainbow",
+      "color": "#ab47bc",
+      "names": [
+        "shaders",
+        "shader",
+        "post_effect"
+      ],
+      "source": "conventional",
+      "glyphColor": "#e1bee7",
+      "colorFrom": "Material Icon Theme: folder-shader"
+    },
+    "particles": {
+      "glyph": "sparkles",
+      "color": "#ba68c8",
+      "names": [
+        "particles",
+        "particle"
+      ],
+      "source": "conventional"
+    },
+    "tags": {
+      "glyph": "tag",
+      "color": "#fbc02d",
+      "names": [
+        "tags",
+        "tag",
+        "mineable",
+        "c"
+      ],
+      "source": "conventional"
+    },
+    "advancements": {
+      "glyph": "trophy",
+      "color": "#ffa000",
+      "names": [
+        "advancements",
+        "advancement",
+        "achievements"
+      ],
+      "source": "conventional"
+    },
+    "progression": {
+      "glyph": "bars",
+      "color": "#00acc1",
+      "names": [
+        "progression"
+      ],
+      "source": "project"
+    },
+    "enchantments": {
+      "glyph": "book",
+      "color": "#673ab7",
+      "names": [
+        "enchantments",
+        "enchantment",
+        "enchant"
+      ],
+      "source": "conventional"
+    },
+    "effects": {
+      "glyph": "potionRed",
+      "color": "#e57373",
+      "names": [
+        "effects",
+        "effect",
+        "potions",
+        "potion",
+        "mob_effect",
+        "mob_effects"
+      ],
+      "source": "conventional"
+    },
+    "gui": {
+      "glyph": "window",
+      "color": "#ab47bc",
+      "names": [
+        "gui",
+        "screen",
+        "screens",
+        "menu"
+      ],
+      "source": "conventional",
+      "glyphColor": "#e1bee7",
+      "colorFrom": "Material Icon Theme: folder-ui"
+    },
+    "render": {
+      "glyph": "eye",
+      "color": "#3f51b5",
+      "names": [
+        "render",
+        "renderer",
+        "renderers",
+        "rendering",
+        "visual"
+      ],
+      "source": "conventional"
+    },
+    "gradle": {
+      "glyph": "hammer",
+      "color": "#0097a7",
+      "names": [
+        "gradle",
+        "buildsrc",
+        "buildlogic",
+        "build-logic",
+        "wrapper"
+      ],
+      "source": "conventional",
+      "glyphColor": "#b2ebf2",
+      "colorFrom": "Material Icon Theme: folder-gradle"
+    },
+    "run": {
+      "glyph": "play",
+      "color": "#43a047",
+      "names": [
+        "run",
+        "runs",
+        "run-client",
+        "run-server",
+        "rundata"
+      ],
+      "source": "conventional"
+    },
+    "generated": {
+      "glyph": "cycle",
+      "color": "#ef5350",
+      "names": [
+        "generated"
+      ],
+      "source": "conventional",
+      "glyphColor": "#ffcdd2",
+      "colorFrom": "Material Icon Theme: folder-generator"
+    },
+    "meta-inf": {
+      "glyph": "info",
+      "color": "#546e7a",
+      "names": [
+        "meta-inf"
+      ],
+      "source": "conventional"
+    },
+    "fabric": {
+      "glyph": "spool",
+      "color": "#bcaaa4",
+      "names": [
+        "fabric",
+        "fabric-1.7.10",
+        "fabric-1.8.9",
+        "fabric-1.12.2",
+        "fabric-1.16.5",
+        "fabric-1.18.2",
+        "fabric-1.19.2",
+        "fabric-1.19.4",
+        "fabric-1.20",
+        "fabric-1.20.1",
+        "fabric-1.20.2",
+        "fabric-1.20.4",
+        "fabric-1.20.6",
+        "fabric-1.21",
+        "fabric-1.21.1",
+        "fabric-1.21.2",
+        "fabric-1.21.3",
+        "fabric-1.21.4",
+        "fabric-1.21.5",
+        "fabric-1.21.6",
+        "fabric-1.21.7",
+        "fabric-1.21.8",
+        "fabric-1.21.9",
+        "fabric-1.21.10"
+      ],
+      "source": "conventional",
+      "rootNames": [
+        "fabric-1.7.10",
+        "fabric-1.8.9",
+        "fabric-1.12.2",
+        "fabric-1.16.5",
+        "fabric-1.18.2",
+        "fabric-1.19.2",
+        "fabric-1.19.4",
+        "fabric-1.20",
+        "fabric-1.20.1",
+        "fabric-1.20.2",
+        "fabric-1.20.4",
+        "fabric-1.20.6",
+        "fabric-1.21",
+        "fabric-1.21.1",
+        "fabric-1.21.2",
+        "fabric-1.21.3",
+        "fabric-1.21.4",
+        "fabric-1.21.5",
+        "fabric-1.21.6",
+        "fabric-1.21.7",
+        "fabric-1.21.8",
+        "fabric-1.21.9",
+        "fabric-1.21.10"
+      ]
+    },
+    "forge": {
+      "glyph": "anvil",
+      "color": "#607d8b",
+      "names": [
+        "forge",
+        "forge-1.7.10",
+        "forge-1.8.9",
+        "forge-1.12.2",
+        "forge-1.16.5",
+        "forge-1.18.2",
+        "forge-1.19.2",
+        "forge-1.19.4",
+        "forge-1.20",
+        "forge-1.20.1",
+        "forge-1.20.2",
+        "forge-1.20.4",
+        "forge-1.20.6",
+        "forge-1.21",
+        "forge-1.21.1",
+        "forge-1.21.2",
+        "forge-1.21.3",
+        "forge-1.21.4",
+        "forge-1.21.5",
+        "forge-1.21.6",
+        "forge-1.21.7",
+        "forge-1.21.8",
+        "forge-1.21.9",
+        "forge-1.21.10"
+      ],
+      "source": "conventional",
+      "rootNames": [
+        "forge-1.7.10",
+        "forge-1.8.9",
+        "forge-1.12.2",
+        "forge-1.16.5",
+        "forge-1.18.2",
+        "forge-1.19.2",
+        "forge-1.19.4",
+        "forge-1.20",
+        "forge-1.20.1",
+        "forge-1.20.2",
+        "forge-1.20.4",
+        "forge-1.20.6",
+        "forge-1.21",
+        "forge-1.21.1",
+        "forge-1.21.2",
+        "forge-1.21.3",
+        "forge-1.21.4",
+        "forge-1.21.5",
+        "forge-1.21.6",
+        "forge-1.21.7",
+        "forge-1.21.8",
+        "forge-1.21.9",
+        "forge-1.21.10"
+      ]
+    },
+    "neoforge": {
+      "glyph": "anvilOrange",
+      "color": "#f4511e",
+      "names": [
+        "neoforge",
+        "neoforged",
+        "neoforge-1.7.10",
+        "neoforge-1.8.9",
+        "neoforge-1.12.2",
+        "neoforge-1.16.5",
+        "neoforge-1.18.2",
+        "neoforge-1.19.2",
+        "neoforge-1.19.4",
+        "neoforge-1.20",
+        "neoforge-1.20.1",
+        "neoforge-1.20.2",
+        "neoforge-1.20.4",
+        "neoforge-1.20.6",
+        "neoforge-1.21",
+        "neoforge-1.21.1",
+        "neoforge-1.21.2",
+        "neoforge-1.21.3",
+        "neoforge-1.21.4",
+        "neoforge-1.21.5",
+        "neoforge-1.21.6",
+        "neoforge-1.21.7",
+        "neoforge-1.21.8",
+        "neoforge-1.21.9",
+        "neoforge-1.21.10"
+      ],
+      "source": "conventional",
+      "rootNames": [
+        "neoforge-1.7.10",
+        "neoforge-1.8.9",
+        "neoforge-1.12.2",
+        "neoforge-1.16.5",
+        "neoforge-1.18.2",
+        "neoforge-1.19.2",
+        "neoforge-1.19.4",
+        "neoforge-1.20",
+        "neoforge-1.20.1",
+        "neoforge-1.20.2",
+        "neoforge-1.20.4",
+        "neoforge-1.20.6",
+        "neoforge-1.21",
+        "neoforge-1.21.1",
+        "neoforge-1.21.2",
+        "neoforge-1.21.3",
+        "neoforge-1.21.4",
+        "neoforge-1.21.5",
+        "neoforge-1.21.6",
+        "neoforge-1.21.7",
+        "neoforge-1.21.8",
+        "neoforge-1.21.9",
+        "neoforge-1.21.10"
+      ]
+    },
+    "quilt": {
+      "glyph": "patchwork",
+      "color": "#9c27b0",
+      "names": [
+        "quilt",
+        "quilt-1.7.10",
+        "quilt-1.8.9",
+        "quilt-1.12.2",
+        "quilt-1.16.5",
+        "quilt-1.18.2",
+        "quilt-1.19.2",
+        "quilt-1.19.4",
+        "quilt-1.20",
+        "quilt-1.20.1",
+        "quilt-1.20.2",
+        "quilt-1.20.4",
+        "quilt-1.20.6",
+        "quilt-1.21",
+        "quilt-1.21.1",
+        "quilt-1.21.2",
+        "quilt-1.21.3",
+        "quilt-1.21.4",
+        "quilt-1.21.5",
+        "quilt-1.21.6",
+        "quilt-1.21.7",
+        "quilt-1.21.8",
+        "quilt-1.21.9",
+        "quilt-1.21.10"
+      ],
+      "source": "conventional",
+      "rootNames": [
+        "quilt-1.7.10",
+        "quilt-1.8.9",
+        "quilt-1.12.2",
+        "quilt-1.16.5",
+        "quilt-1.18.2",
+        "quilt-1.19.2",
+        "quilt-1.19.4",
+        "quilt-1.20",
+        "quilt-1.20.1",
+        "quilt-1.20.2",
+        "quilt-1.20.4",
+        "quilt-1.20.6",
+        "quilt-1.21",
+        "quilt-1.21.1",
+        "quilt-1.21.2",
+        "quilt-1.21.3",
+        "quilt-1.21.4",
+        "quilt-1.21.5",
+        "quilt-1.21.6",
+        "quilt-1.21.7",
+        "quilt-1.21.8",
+        "quilt-1.21.9",
+        "quilt-1.21.10"
+      ]
+    }
+  },
+  "files": {
+    "fabric-mod": {
+      "glyph": "spool",
+      "fileNames": [
+        "fabric.mod.json"
+      ]
+    },
+    "quilt-mod": {
+      "glyph": "patchwork",
+      "fileNames": [
+        "quilt.mod.json"
+      ]
+    },
+    "forge-mods": {
+      "glyph": "anvil",
+      "fileNames": [
+        "mods.toml"
+      ]
+    },
+    "neoforge-mods": {
+      "glyph": "anvilOrange",
+      "fileNames": [
+        "neoforge.mods.toml"
+      ]
+    },
+    "mixin-config": {
+      "glyph": "potion",
+      "fileNames": [
+        "mixins.json"
+      ],
+      "fileExtensions": [
+        "mixins.json",
+        "mixin.json"
+      ]
+    },
+    "access-widener": {
+      "glyph": "key",
+      "fileNames": [
+        "accesstransformer.cfg"
+      ],
+      "fileExtensions": [
+        "accesswidener",
+        "classtweaker",
+        "aw"
+      ]
+    },
+    "pack-meta": {
+      "glyph": "grassCube",
+      "fileNames": [
+        "pack.mcmeta",
+        "pack.png"
+      ],
+      "fileExtensions": [
+        "mcmeta"
+      ]
+    },
+    "nbt": {
+      "glyph": "tower",
+      "fileExtensions": [
+        "nbt",
+        "snbt",
+        "schem",
+        "schematic",
+        "litematic"
+      ]
+    },
+    "mcfunction": {
+      "glyph": "terminal",
+      "fileExtensions": [
+        "mcfunction"
+      ]
+    },
+    "mc-shader": {
+      "glyph": "rainbow",
+      "fileExtensions": [
+        "fsh",
+        "vsh"
+      ]
+    },
+    "blockbench": {
+      "glyph": "wireCube",
+      "fileExtensions": [
+        "bbmodel"
+      ]
+    },
+    "sounds-json": {
+      "glyph": "note",
+      "fileNames": [
+        "sounds.json"
+      ]
+    },
+    "zenscript": {
+      "glyph": "craftGrid",
+      "fileExtensions": [
+        "zs"
+      ]
+    },
+    "mc-lang": {
+      "glyph": "speech",
+      "fileNames": [
+        "en_us.json",
+        "en_gb.json",
+        "pt_br.json",
+        "pt_pt.json",
+        "es_es.json",
+        "es_mx.json",
+        "fr_fr.json",
+        "de_de.json",
+        "it_it.json",
+        "ru_ru.json",
+        "uk_ua.json",
+        "pl_pl.json",
+        "tr_tr.json",
+        "nl_nl.json",
+        "sv_se.json",
+        "zh_cn.json",
+        "zh_tw.json",
+        "ja_jp.json",
+        "ko_kr.json"
+      ],
+      "fileExtensions": [
+        "lang"
+      ]
+    }
+  }
+}

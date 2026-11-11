@@ -1,0 +1,7 @@
+node_modules/
+dist/
+reports/
+*.vsix
+# gerados pelo build (npm run package)
+icons/material/
+themes/

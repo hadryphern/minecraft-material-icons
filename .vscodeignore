@@ -1,0 +1,14 @@
+# Só o necessário vai para o .vsix: package.json, README, CHANGELOG, LICENSE,
+# THIRD_PARTY_NOTICES.md, licenses/, images/icon.png, themes/ e icons/.
+node_modules/**
+scripts/**
+src/**
+docs/**
+reports/**
+dist/**
+images/icon.svg
+.vscode/**
+.gitignore
+**/*.vsix
+images/preview.png
+images/explorer-preview.png
