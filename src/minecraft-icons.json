@@ -1,5 +1,5 @@
 {
-  "_comment": "Fonte única dos ícones Minecraft. Edite aqui (ou use `npm run add-folder`) e rode `npm run package`. 'glyph' = nome em src/glyphs.mjs; 'color' = cor da pasta (estilo Material: uma cor por ícone; arquivos de mod usam as cores de src/file-glyphs.mjs); 'glyphColor' (opcional) = cor do símbolo, por padrão um tom claro de 'color'; 'names' = nomes de pasta (minúsculos); 'rootNames' = nomes quando a pasta é raiz do workspace; 'source' = 'project' ou 'conventional'.",
+  "_comment": "Single source of the Minecraft icons. Edit it here (or use `npm run add-folder`) and run `npm run package`. 'glyph' = name in src/glyphs.mjs (folders) or src/file-glyphs.mjs (files); 'color' = folder color (Material style: one color per icon; mod files use the colors in src/file-glyphs.mjs); 'glyphColor' (optional) = symbol color, a light tint of 'color' by default; 'names' = folder names (lowercase); 'rootNames' = names when the folder is the workspace root; 'source' = 'project' or 'conventional'.",
   "folders": {
     "src": {
       "glyph": "code",

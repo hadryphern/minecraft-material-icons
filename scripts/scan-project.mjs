@@ -1,22 +1,22 @@
-// Analisa um projeto de mod Minecraft (SOMENTE LEITURA — nunca cria nem altera pastas no projeto).
-// Suporta repositórios com vários loaders/versões (ex.: Fabric/1.20.1, NeoForge/1.21.1).
-// Uso: npm run scan -- "C:\caminho\do\seu\mod"
-// Gera reports/project-scan.md e reports/project-scan.json; depois rode `npm run package`
-// para que o README e docs/FOLDERS.md marquem as pastas encontradas.
+// Analyzes a Minecraft mod project (READ-ONLY — never creates or changes folders in the project).
+// Supports repositories with several loaders/versions (e.g. Fabric/1.20.1, NeoForge/1.21.1).
+// Usage: npm run scan -- "C:\path\to\your\mod"
+// Writes reports/project-scan.md and reports/project-scan.json; then run `npm run package`
+// so the README and docs/FOLDERS.md mark the folders that were found.
 import fs from 'node:fs';
 import path from 'node:path';
 import { r, readJson, writeJson, loadConfig, MATERIAL_PKG } from './lib.mjs';
 
 const target = process.argv[2];
 if (!target || !fs.existsSync(target) || !fs.statSync(target).isDirectory()) {
-  console.error('Uso: npm run scan -- "<caminho do projeto de mod>"');
+  console.error('Usage: npm run scan -- "<path to your mod project>"');
   process.exit(1);
 }
 const root = path.resolve(target);
 const rel = (p) => path.relative(root, p).split(path.sep).join('/') || '.';
 const readAt = (dir, ...p) => { const f = path.join(dir, ...p); return fs.existsSync(f) && fs.statSync(f).isFile() ? fs.readFileSync(f, 'utf8') : null; };
 
-// ---------- varredura ----------
+// ---------- scan ----------
 const SKIP = new Set(['.git', '.gradle', '.idea', 'build', 'out', 'bin', 'node_modules', '.vscode']);
 const NO_DESCEND = new Set(['run', 'runs', 'logs', 'crash-reports', 'saves']);
 const GRADLE_MARKERS = ['settings.gradle', 'settings.gradle.kts', 'build.gradle', 'build.gradle.kts'];
@@ -43,7 +43,7 @@ let javaFiles = 0, kotlinFiles = 0;
   }
 })(root, 0);
 
-// Projetos Gradle "raiz": ignora subprojetos de outro projeto que tenha settings.gradle
+// "Root" Gradle projects: skip subprojects of another project that has settings.gradle
 const settingsRoots = gradleDirs.filter((d) => ['settings.gradle', 'settings.gradle.kts'].some((f) => fs.existsSync(path.join(d, f))));
 const projects = gradleDirs.filter((d) => settingsRoots.includes(d) || !settingsRoots.some((s) => d !== s && d.startsWith(s + path.sep)));
 
@@ -68,7 +68,7 @@ function analyze(dir) {
   for (const f of metas) {
     const txt = fs.readFileSync(f, 'utf8');
     if (f.endsWith('.json')) {
-      try { const j = JSON.parse(txt); modId ??= j.id ?? j.quilt_loader?.id; mc ??= j.depends?.minecraft ?? null; } catch { /* ignora */ }
+      try { const j = JSON.parse(txt); modId ??= j.id ?? j.quilt_loader?.id; mc ??= j.depends?.minecraft ?? null; } catch { /* ignore */ }
     } else {
       modId ??= txt.match(/modId\s*=\s*"([^"]+)"/)?.[1];
       mc ??= txt.match(/modId\s*=\s*"minecraft"[\s\S]*?versionRange\s*=\s*"([^"]+)"/)?.[1] ?? null;
@@ -93,14 +93,14 @@ function analyze(dir) {
 }
 const gradleProjects = projects.map(analyze);
 
-// Pastas de loader sem projeto Gradle (ex.: Forge/ só com README)
+// Loader folders without a Gradle project (e.g. Forge/ with only a README)
 const LOADER_DIRS = ['fabric', 'forge', 'neoforge', 'quilt'];
 const placeholders = fs.readdirSync(root, { withFileTypes: true })
   .filter((e) => e.isDirectory() && LOADER_DIRS.includes(e.name.toLowerCase()))
   .filter((e) => !gradleProjects.some((g) => g.path === e.name || g.path.startsWith(e.name + '/')))
   .map((e) => e.name);
 
-// ---------- classificação ----------
+// ---------- classification ----------
 const cfg = loadConfig();
 const mcNames = new Map();
 for (const [k, d] of Object.entries(cfg.folders)) for (const n of d.names) mcNames.set(n, k);
@@ -123,25 +123,25 @@ const result = {
 };
 writeJson(r('reports', 'project-scan.json'), result);
 
-// ---------- relatório ----------
-const lang = [javaFiles && `Java (${javaFiles} arquivos)`, kotlinFiles && `Kotlin (${kotlinFiles} arquivos)`].filter(Boolean).join(' + ') || 'nenhum código encontrado';
-const list = (a) => (a.length ? a.map((n) => `\`${n}\``).join(', ') : '_nenhuma_');
-let md = `# Scan do projeto \`${result.projectName}\` (${result.date})\n\nLinguagem: **${lang}**. Projetos Gradle: **${gradleProjects.length}**.`;
-if (placeholders.length) md += ` Pastas de loader ainda sem projeto Gradle: ${list(placeholders)}.`;
+// ---------- report ----------
+const lang = [javaFiles && `Java (${javaFiles} files)`, kotlinFiles && `Kotlin (${kotlinFiles} files)`].filter(Boolean).join(' + ') || 'no code found';
+const list = (a) => (a.length ? a.map((n) => `\`${n}\``).join(', ') : '_none_');
+let md = `# Project scan: \`${result.projectName}\` (${result.date})\n\nLanguage: **${lang}**. Gradle projects: **${gradleProjects.length}**.`;
+if (placeholders.length) md += ` Loader folders without a Gradle project yet: ${list(placeholders)}.`;
 md += '\n\n';
 for (const g of gradleProjects) {
-  md += `## Projeto Gradle \`${g.path}\`\n\n| Item | Resultado |\n|---|---|\n`;
-  md += `| Versão do Minecraft | ${g.minecraftVersion ?? 'não identificada'} |\n`;
-  md += `| Loader | ${g.loaders.join(', ') || 'não identificado'}${g.architectury ? ' (Architectury)' : ''} |\n`;
-  md += `| Mod ID | ${g.modId ?? '—'}${g.modVersion ? ` (versão ${g.modVersion})` : ''}${g.mavenGroup ? `, grupo \`${g.mavenGroup}\`` : ''} |\n`;
+  md += `## Gradle project \`${g.path}\`\n\n| Item | Result |\n|---|---|\n`;
+  md += `| Minecraft version | ${g.minecraftVersion ?? 'not detected'} |\n`;
+  md += `| Loader | ${g.loaders.join(', ') || 'not detected'}${g.architectury ? ' (Architectury)' : ''} |\n`;
+  md += `| Mod ID | ${g.modId ?? '—'}${g.modVersion ? ` (version ${g.modVersion})` : ''}${g.mavenGroup ? `, group \`${g.mavenGroup}\`` : ''} |\n`;
   md += `| Gradle | ${g.gradleFiles.join(', ')}${g.gradleWrapper ? ` — wrapper ${g.gradleWrapper}` : ''} |\n`;
-  md += `| Subprojetos | ${g.subprojects.join(', ') || '—'} |\n| Source sets | ${g.sourceSets.join(', ') || '—'} |\n`;
-  md += `| Metadados | ${g.modMetadata.join(', ') || '—'} |\n\n`;
+  md += `| Subprojects | ${g.subprojects.join(', ') || '—'} |\n| Source sets | ${g.sourceSets.join(', ') || '—'} |\n`;
+  md += `| Metadata | ${g.modMetadata.join(', ') || '—'} |\n\n`;
 }
-md += `## Pastas encontradas com ícone Minecraft (${withMc.length})\n${withMc.map((n) => `- \`${n}\` → ${mcNames.get(n)}`).join('\n') || '_nenhuma_'}\n\n`;
-md += `## Pastas encontradas com ícone geral do Material (${withMaterial.length})\n${list(withMaterial)}\n\n`;
-md += `## Nomes personalizados sem ícone específico (${custom.length})\n${custom.map((n) => `- \`${n}\` (${folderPaths.get(n)[0]}) — \`npm run add-folder -- ${n} <categoria>\``).join('\n') || '_nenhum_'}\n\n`;
-md += `## Categorias apenas previstas (não existem no projeto) (${predicted.length})\n${list(predicted)}\n\n> Este scan é somente leitura: nenhuma pasta foi criada no seu projeto.\n`;
+md += `## Folders found with a Minecraft icon (${withMc.length})\n${withMc.map((n) => `- \`${n}\` → ${mcNames.get(n)}`).join('\n') || '_none_'}\n\n`;
+md += `## Folders found with a general Material icon (${withMaterial.length})\n${list(withMaterial)}\n\n`;
+md += `## Custom names without a specific icon (${custom.length})\n${custom.map((n) => `- \`${n}\` (${folderPaths.get(n)[0]}) — \`npm run add-folder -- ${n} <category>\``).join('\n') || '_none_'}\n\n`;
+md += `## Predicted-only categories (not in the project) (${predicted.length})\n${list(predicted)}\n\n> This scan is read-only: no folder was created in your project.\n`;
 fs.writeFileSync(r('reports', 'project-scan.md'), md);
 console.log(md);
-console.log('✔ Relatório salvo em reports/project-scan.md. Rode "npm run package" para atualizar o README e docs/FOLDERS.md.');
+console.log('✔ Report saved to reports/project-scan.md. Run "npm run package" to update the README and docs/FOLDERS.md.');

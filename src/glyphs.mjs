@@ -1,8 +1,8 @@
-// Símbolos das PASTAS: pixel-art ORIGINAL, monocromática e "cheia" (estilo Material Icon Theme).
-// '#' = pixel preenchido, '.' = vazio. Máximo 8x8. Formas sólidas, com poucos recortes para os detalhes.
-// O símbolo é pintado num tom claro da cor da pasta (ver src/minecraft-icons.json).
-// Os símbolos dos ícones de arquivo ficam em src/file-glyphs.mjs.
-// Nenhum desenho copia texturas oficiais do Minecraft: são ícones conceituais.
+// FOLDER symbols: ORIGINAL, monochrome, solid pixel art (Material Icon Theme style).
+// '#' = filled pixel, '.' = empty. 8x8 max. Solid shapes with only a few cut-outs for details.
+// The symbol is painted in a light tint of the folder color (see src/minecraft-icons.json).
+// File icon symbols live in src/file-glyphs.mjs.
+// No drawing copies official Minecraft textures: these are conceptual icons.
 
 export const GLYPHS = {
   code: [ // </>
@@ -31,7 +31,7 @@ export const GLYPHS = {
     '...##...',
     '.######.'
   ],
-  exchange: [ // duas janelas sobrepostas (compartilhado)
+  exchange: [ // two overlapping windows (shared)
     '#####...',
     '#####...',
     '##......',
@@ -68,7 +68,7 @@ export const GLYPHS = {
     '##..##.',
     '##...##'
   ],
-  parcel: [ // caixa com tampa
+  parcel: [ // box with lid
     '########',
     '########',
     '........',
@@ -381,7 +381,7 @@ export const GLYPHS = {
     '.##....',
     '.#.....'
   ],
-  wireCube: [ // caixa 3D (models)
+  wireCube: [ // 3D box (models)
     '..######',
     '.######.',
     '........',

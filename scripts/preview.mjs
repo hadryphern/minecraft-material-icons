@@ -1,4 +1,4 @@
-// Gera reports/preview.png: folha com todos os ícones Minecraft (escuro e claro).
+// Generates images/preview.png: a sheet with every Minecraft icon (dark and light backgrounds).
 import fs from 'node:fs';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';

@@ -1,4 +1,4 @@
-// Utilitários compartilhados pelos scripts de build.
+// Shared helpers for the build scripts.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -14,7 +14,7 @@ export const writeJson = (file, data) => {
 
 export const loadConfig = () => readJson(r('src', 'minecraft-icons.json'));
 
-// Prefixo de todos os IDs Minecraft: evita colisão com IDs do Material Icon Theme.
+// Prefix for every Minecraft icon ID: avoids collisions with Material Icon Theme IDs.
 export const MC_PREFIX = 'mc-';
 export const ids = {
   folder: (k) => `${MC_PREFIX}folder-${k}`,

@@ -1,22 +1,28 @@
 # Changelog
 
+## 1.1.2 — 2026-11-11
+
+### Changed
+- Everything is now in English: README, changelog, credits, Marketplace description, theme labels and script messages.
+- The no-arrows option is now called **Minecraft Material Icons (No Arrows)** (same theme ID, so existing settings keep working).
+
 ## 1.1.1 — 2026-11-11
 
-### Alterado
-- Ícone da extensão volta a ser a pasta pixel-art verde com o bloco de terra colorido.
+### Changed
+- The extension icon is back to the green pixel-art folder with the colorful grass block.
 
 ## 1.1.0 — 2026-11-11
 
-### Adicionado
-- Variante **Minecraft Material Icons (sem setas)**, que esconde as setinhas de expandir/recolher do Explorer.
-- README: como esconder as linhas verticais da árvore (`workbench.tree.renderIndentGuides`).
+### Added
+- **No Arrows** variant, which hides the Explorer's expand/collapse arrows.
+- README: how to hide the vertical tree lines (`workbench.tree.renderIndentGuides`).
 
 ## 1.0.0 — 2026-11-11
 
-### Adicionado
-- Tema combinado **Minecraft Material Icons**.
-- 61 categorias de pasta Minecraft (289 nomes, incluindo pastas de versão como `1.20.1` e `fabric-1.21.1`), com ícones fechados e abertos no estilo do Material Icon Theme: formato de pasta do Material, uma cor por ícone e símbolo pixel-art cheio (formas sólidas com poucos recortes) num tom claro da mesma cor. Inclui os nomes do projeto ChaoticDimensions (`chaoticd`, `aurora`, `shadow`, `progression`, `registry`, `worldgen`, `mixin`, `compat`, `orespawn`, `dream_fluid_*`...), analisado com `npm run scan`.
-- 14 categorias de arquivo de mod, com ícones pixel-art coloridos e contorno escuro: `fabric.mod.json`, `quilt.mod.json`, `mods.toml`, `neoforge.mods.toml`, `*.mixins.json`, access wideners e transformers, `pack.mcmeta`, NBT e schematics, `*.mcfunction`, shaders `.fsh` e `.vsh`, `.bbmodel`, `sounds.json`, `.zs` e arquivos de idioma.
-- Ícones gerais do Material Icon Theme 5.40.0 (MIT), com prioridade para as associações Minecraft.
-- Publicado pelo publisher `hadryphern`; código em https://github.com/hadryphern/minecraft-material-icons.
-- Scripts `build`, `validate`, `package` (com verificação do `.vsix`), `scan`, `add-folder` e `preview`.
+### Added
+- Combined **Minecraft Material Icons** theme.
+- 61 Minecraft folder categories (289 names, including version folders such as `1.20.1` and `fabric-1.21.1`), with closed and open icons in the Material Icon Theme style: Material's folder shape, one color per icon and a solid pixel-art symbol in a light tint of the same color. Includes names from the ChaoticDimensions project (`chaoticd`, `aurora`, `shadow`, `progression`, `registry`, `worldgen`, `mixin`, `compat`, `orespawn`, `dream_fluid_*`...), analyzed with `npm run scan`.
+- 14 mod file categories with colorful pixel-art icons and a dark outline: `fabric.mod.json`, `quilt.mod.json`, `mods.toml`, `neoforge.mods.toml`, `*.mixins.json`, access wideners and transformers, `pack.mcmeta`, NBT and schematics, `*.mcfunction`, `.fsh`/`.vsh` shaders, `.bbmodel`, `sounds.json`, `.zs` and language files.
+- General icons from Material Icon Theme 5.40.0 (MIT), with priority given to the Minecraft associations.
+- Published under the `hadrykkxd` publisher; source code at https://github.com/hadryphern/minecraft-material-icons.
+- `build`, `validate`, `package` (with `.vsix` check), `scan`, `add-folder` and `preview` scripts.

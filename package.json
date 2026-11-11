@@ -1,8 +1,8 @@
 {
   "name": "minecraft-material-icons",
   "displayName": "Minecraft Material Icons",
-  "description": "Tema de ícones que combina ícones pixel-art inspirados em Minecraft para pastas e arquivos de mods (Fabric, Forge, NeoForge, Quilt) com os ícones gerais do Material Icon Theme.",
-  "version": "1.1.1",
+  "description": "Icon theme for Minecraft mod projects (Fabric, Forge, NeoForge, Quilt): Material-style folder icons with pixel-art Minecraft symbols, colorful mod file icons, plus all the general Material Icon Theme icons.",
+  "version": "1.1.2",
   "publisher": "hadrykkxd",
   "author": {
     "name": "hadryphern",
@@ -48,7 +48,7 @@
       },
       {
         "id": "minecraft-material-icons-no-arrows",
-        "label": "Minecraft Material Icons (sem setas)",
+        "label": "Minecraft Material Icons (No Arrows)",
         "path": "./themes/minecraft-material-icons-no-arrows.json"
       }
     ]

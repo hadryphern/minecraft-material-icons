@@ -1,32 +1,32 @@
-// Símbolos dos ÍCONES DE ARQUIVO de mod: pixel-art ORIGINAL e COLORIDA, com contorno escuro.
-// Cada caractere é um pixel; '.' = transparente. As cores vêm de PALETTE. Máximo 8x8.
-// Nenhum desenho copia texturas oficiais do Minecraft: são ícones conceituais.
-// (Os símbolos das pastas, monocromáticos no estilo Material, ficam em src/glyphs.mjs.)
+// Mod FILE ICON symbols: ORIGINAL, COLORFUL pixel art with a dark outline.
+// Each character is one pixel; '.' = transparent. Colors come from PALETTE. 8x8 max.
+// No drawing copies official Minecraft textures: these are conceptual icons.
+// (Folder symbols, monochrome in the Material style, live in src/glyphs.mjs.)
 
 export const PALETTE = {
-  k: '#1d1d24', // contorno / pupila
-  w: '#f4f4f4', // branco
-  l: '#c9ccd3', // cinza claro (metal)
-  g: '#8e939c', // cinza (pedra)
-  d: '#565b66', // cinza escuro
-  r: '#e04848', // vermelho
-  R: '#9e2a2a', // vermelho escuro
-  o: '#f0903a', // laranja
-  O: '#b85c1a', // laranja escuro
-  y: '#f6d24a', // dourado
-  Y: '#c2971f', // dourado escuro
-  G: '#5cc24a', // verde (grama)
-  E: '#2f8a3a', // verde escuro
-  b: '#4aa3f0', // azul claro
-  B: '#2f5fc4', // azul
-  c: '#5fe0d8', // ciano
-  C: '#2a9e9a', // turquesa
-  p: '#b46cf0', // roxo
-  P: '#5b2a9a', // roxo escuro
+  k: '#1d1d24', // outline / pupil
+  w: '#f4f4f4', // white
+  l: '#c9ccd3', // light gray (metal)
+  g: '#8e939c', // gray (stone)
+  d: '#565b66', // dark gray
+  r: '#e04848', // red
+  R: '#9e2a2a', // dark red
+  o: '#f0903a', // orange
+  O: '#b85c1a', // dark orange
+  y: '#f6d24a', // gold
+  Y: '#c2971f', // dark gold
+  G: '#5cc24a', // green (grass)
+  E: '#2f8a3a', // dark green
+  b: '#4aa3f0', // light blue
+  B: '#2f5fc4', // blue
+  c: '#5fe0d8', // cyan
+  C: '#2a9e9a', // teal
+  p: '#b46cf0', // purple
+  P: '#5b2a9a', // dark purple
   m: '#f07ad0', // magenta
-  n: '#a8743f', // madeira / terra
-  N: '#6b4524', // madeira escura
-  s: '#ecd29c'  // papel / areia
+  n: '#a8743f', // wood / dirt
+  N: '#6b4524', // dark wood
+  s: '#ecd29c'  // paper / sand
 };
 
 export const FILE_GLYPHS = {
@@ -139,7 +139,7 @@ export const FILE_GLYPHS = {
     'nssnssn',
     'nnnnnnn'
   ],
-  speech: [ // arquivos de idioma
+  speech: [ // language files
     'wwwwwww',
     'wwwBwww',
     'wwBwBww',
