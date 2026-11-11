@@ -127,7 +127,9 @@ fs.mkdirSync(r('licenses'), { recursive: true });
 fs.copyFileSync(path.join(MATERIAL_PKG, 'LICENSE'), r('licenses', 'material-icon-theme-LICENSE'));
 
 // ---------- 6. Gravar tema e relatórios ----------
+theme.hidesExplorerArrows = false;
 writeJson(THEME_FILE, theme);
+writeJson(r('themes', 'minecraft-material-icons-no-arrows.json'), { ...theme, hidesExplorerArrows: true });
 fs.mkdirSync(r('dist'), { recursive: true });
 report.counts = {
   iconDefinitions: Object.keys(theme.iconDefinitions).length,

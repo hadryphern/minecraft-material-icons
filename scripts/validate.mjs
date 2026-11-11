@@ -40,16 +40,20 @@ if (pkg.icon) {
   }
 }
 const themes = pkg.contributes?.iconThemes ?? [];
-if (themes.length !== 1) err('package.json: deve haver exatamente 1 contributes.iconThemes');
+if (themes.length !== 2) err('package.json: deve haver 2 contributes.iconThemes (com e sem setas)');
 for (const t of themes) {
   if (!t.id || !t.label || !t.path) err('package.json: iconThemes precisa de id, label e path');
-  if (t.label !== 'Minecraft Material Icons') err('package.json: label do tema deve ser "Minecraft Material Icons"');
+  if (!t.label.startsWith('Minecraft Material Icons')) err('package.json: label do tema deve começar com "Minecraft Material Icons"');
   if (path.isAbsolute(t.path) || /^[a-zA-Z]:/.test(t.path)) err(`package.json: caminho absoluto em iconThemes: ${t.path}`);
   if (!fs.existsSync(r(t.path))) err(`package.json: tema não encontrado: ${t.path}`);
 }
 
 // ---------- tema ----------
 const theme = readJson(THEME_FILE);
+const noArrows = readJson(r('themes', 'minecraft-material-icons-no-arrows.json'));
+if (noArrows.hidesExplorerArrows !== true) err('Tema sem setas deve ter hidesExplorerArrows: true');
+if (theme.hidesExplorerArrows !== false) err('Tema padrão deve ter hidesExplorerArrows: false');
+if (JSON.stringify({ ...noArrows, hidesExplorerArrows: false }) !== JSON.stringify(theme)) err('Os dois temas devem ser idênticos, exceto pelas setas');
 const themeDir = path.dirname(THEME_FILE);
 const defs = theme.iconDefinitions ?? {};
 if (!Object.keys(defs).length) err('Tema sem iconDefinitions');

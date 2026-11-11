@@ -15,15 +15,25 @@ Cada pasta Minecraft tem versão **fechada e aberta**. Como no Material Icon The
 
 **Pelo Marketplace:** procure **Minecraft Material Icons** na aba *Extensions* do VS Code, ou rode `ext install hadrykkxd.minecraft-material-icons` no Quick Open (`Ctrl+P`).
 
-**Pelo .vsix:** abra o VS Code e vá em *Extensions* (`Ctrl+Shift+X`). Clique em `...` (canto superior direito), escolha **Install from VSIX...** e selecione `minecraft-material-icons-1.0.0.vsix`.
+**Pelo .vsix:** abra o VS Code e vá em *Extensions* (`Ctrl+Shift+X`). Clique em `...` (canto superior direito), escolha **Install from VSIX...** e selecione `minecraft-material-icons-1.1.0.vsix`.
 
 **Pelo terminal:**
 
 ```bash
-code --install-extension "minecraft-material-icons-1.0.0.vsix"
+code --install-extension "minecraft-material-icons-1.1.0.vsix"
 ```
 
 **Ativar o tema:** `Ctrl+Shift+P` → **Preferences: File Icon Theme** → **Minecraft Material Icons**.
+
+Há duas opções no seletor:
+- **Minecraft Material Icons**: com as setinhas (›/⌄) ao lado das pastas.
+- **Minecraft Material Icons (sem setas)**: esconde as setinhas do Explorer. O ícone de pasta aberta ou fechada indica o estado.
+
+**Esconder as linhas verticais da árvore:** elas são uma configuração do VS Code, não do tema. Em `Ctrl+Shift+P` → **Preferences: Open User Settings (JSON)**, adicione:
+
+```json
+"workbench.tree.renderIndentGuides": "none"
+```
 
 A extensão é independente: ela **não altera** a instalação do Material Icon Theme. As duas podem ficar instaladas; vale o tema escolhido em *File Icon Theme*.
 

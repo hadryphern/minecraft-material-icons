@@ -29,6 +29,7 @@ await new Promise((resolve, reject) => {
 const errors = [];
 const themeTxt = entries.get('extension/themes/minecraft-material-icons.json');
 if (!themeTxt) errors.push('tema ausente no .vsix');
+if (!entries.has('extension/themes/minecraft-material-icons-no-arrows.json')) errors.push('tema sem setas ausente no .vsix');
 const vpkg = entries.get('extension/package.json') ? JSON.parse(entries.get('extension/package.json')) : null;
 if (vpkg?.displayName !== 'Minecraft Material Icons') errors.push('package.json do .vsix sem displayName correto');
 let svgs = 0;

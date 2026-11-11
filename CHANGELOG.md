@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 — 2026-11-11
+
+### Adicionado
+- Variante **Minecraft Material Icons (sem setas)**, que esconde as setinhas de expandir/recolher do Explorer.
+- README: como esconder as linhas verticais da árvore (`workbench.tree.renderIndentGuides`).
+
 ## 1.0.0 — 2026-11-11
 
 ### Adicionado
